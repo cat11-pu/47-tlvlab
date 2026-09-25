@@ -1,0 +1,11 @@
+{
+  "bad_checksum_code": "E_BAD_CHECKSUM",
+  "unknown_type_code": "E_UNKNOWN_TYPE",
+  "bytes": "01414243024445",
+  "transforms": [
+    {"name": "split", "params": {}},
+    {"name": "upper", "params": {}},
+    {"name": "mask", "params": {"field": 1}}
+  ],
+  "resume_from": 2
+}
