@@ -12,10 +12,10 @@ const spec = JSON.parse(fs.readFileSync(process.argv[2] || "sample/tlv.json", "u
 const result = run(spec.bytes, spec.transforms || [], spec.resume_from || 0);
 const view = render(spec);
 
-emit("字段表 =", JSON.stringify(result.fields));
+emit("字段表 =", result.fields);
 emit("校验和 =", result.checksum);
 emit("校验是否通过 =", view.checksum_ok);
-emit("应用的变换 =", JSON.stringify(result.applied));
+emit("应用的变换 =", result.applied);
 emit("续做起点 =", result.resumed_from);
 emit("重复处理的变换数 =", result.reprocessed);
 emit("编回去是否与原报文一致 =", view.roundtrip);
